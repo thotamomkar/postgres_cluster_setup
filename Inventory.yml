@@ -1,0 +1,6 @@
+etcd01 ansible_connection=local ansible_ssh_host=172.17.177.29
+pghost01      ansible_ssh_host=172.17.177.27 ansible_ssh_private_key_file=/vagrant/.vagrant/machines/pghost01/virtualbox/private_key ansible_ssh_common_args='-o StrictHostKeyChecking=no'
+pghost02      ansible_ssh_host=172.17.177.28 ansible_ssh_private_key_file=/vagrant/.vagrant/machines/pghost02/virtualbox/private_key ansible_ssh_common_args='-o StrictHostKeyChecking=no'
+
+[nodes]
+pghost0[1:2]

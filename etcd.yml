@@ -1,0 +1,24 @@
+- name: Setup etcd on ETCD host
+  gather_facts: true
+  hosts: etcd01
+  become: yes
+  tasks:
+    - name: Add PostgreSQL repo
+      become: yes
+      apt_repository:
+        repo: "deb http://deb.debian.org/debian {{ ansible_distribution_release }} main contrib non-free"
+        state: present
+        filename: sources
+
+    - name: Install etcd package
+      become: yes
+      apt:
+        name:
+          - etcd
+        state: present
+
+    - name: Create etcd configuration file
+      become: yes
+      template:
+        src: etcd.cfg
+        dest: /etc/default/etcd
