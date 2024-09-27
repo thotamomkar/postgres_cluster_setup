@@ -1,1 +1,0 @@
-{"virtualbox":{"/vagrant":{"disabled":false,"guestpath":"/vagrant","hostpath":"C:/Users/OMKAR/Desktop/pg_test","mount_options":["dmode=755,fmode=600","_netdev","_netdev","uid=1000","gid=1000","_netdev"],"__vagrantfile":true}}}
